@@ -20,7 +20,7 @@ public class SSMRegistry {
         Registry.register(BatoruRegistries.SKILL, MODID +":" +id, skill);
     }
 
-    public static void registerJob(String id, Skill skill1, Skill skill2, Skill skill3, Skill skill4, ItemStack mainhand, ItemStack offhand, ItemStack head, ItemStack chest, ItemStack legs, ItemStack feet) {
+    public static void registerJob(String id, Skill skill1, Skill skill2, Skill skill3, Skill skill4, ItemStack mainhand) {
         var skillmap = new HashMap<SkillSlot, RegistryEntry<Skill>>();
         skillmap.put(SkillSlot.NORMAL_1, RegistryEntry.of(skill1));
         skillmap.put(SkillSlot.NORMAL_2, RegistryEntry.of(skill2));
@@ -30,11 +30,6 @@ public class SSMRegistry {
         Job job = Job.builder()
                 .skillMap(skillmap)
                 .equipStack(EquipmentSlot.MAINHAND, mainhand)
-                .equipStack(EquipmentSlot.OFFHAND, offhand)
-                .equipStack(EquipmentSlot.HEAD, head)
-                .equipStack(EquipmentSlot.CHEST, chest)
-                .equipStack(EquipmentSlot.LEGS, legs)
-                .equipStack(EquipmentSlot.FEET, feet)
                 .build();
         Registry.register(BatoruRegistries.JOB, MODID +":" +id, job);
     }

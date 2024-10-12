@@ -4,6 +4,7 @@ import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import org.karn.supersmashmobs.command.GameCommand;
+import org.karn.supersmashmobs.registry.SSMAttributes;
 import org.karn.supersmashmobs.util.SSMRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,7 @@ public class SuperSmashMobs implements ModInitializer {
         CommandRegistrationCallback.EVENT.register((dispatcher, commandRegistryAccess, ignored1) -> {
             GameCommand.register(dispatcher);
         });
-
+        SSMAttributes.init();
         SSMRegistry.registerKits();
         PolymerResourcePackUtils.addModAssets(MODID);
         PolymerResourcePackUtils.markAsRequired();

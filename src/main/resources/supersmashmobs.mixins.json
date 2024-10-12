@@ -4,6 +4,7 @@
   "package": "org.karn.supersmashmobs.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "LivingEntityMixin",
     "ServerPlayerEntityMixin"
   ],
   "client": [

@@ -36,10 +36,10 @@ public class ServerPlayerEntityMixin implements SuperSmashMobsAPI {
         player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(kit.Health);
         player.setHealth(kit.Health);
         player.getAttributeInstance(SSMAttributes.HEALTH_REGEN).setBaseValue(kit.HealthRegen);
-        //player.getAttributeInstance(SSMAttributes.KNOCKBACK_TAKEN).setBaseValue(kit.KnockbackMultiplier);
-        //player.getAttributeInstance(SSMAttributes.ATTACK_SPEED).setBaseValue(kit.AttackSpeed);
-        //player.getAttributeInstance(SSMAttributes.ATTACK_DMG).setBaseValue(kit.AttackDamage);
-        //player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(kit.Speed);
+        player.getAttributeInstance(SSMAttributes.KNOCKBACK_TAKEN).setBaseValue(kit.KnockbackMultiplier);
+        player.getAttributeInstance(SSMAttributes.ATTACK_SPEED).setBaseValue(kit.AttackSpeed);
+        player.getAttributeInstance(SSMAttributes.ATTACK_DMG).setBaseValue(kit.AttackDamage);
+        player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(kit.Speed);
     }
 
 

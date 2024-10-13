@@ -11,7 +11,7 @@ import org.karn.supersmashmobs.registry.SSMAttributes;
 
 public class PlayerTick {
     public static void main(ServerPlayerEntity player){
-        if(player.isSpectator()) return;
+        if(player.isSpectator() || player.isCreative()) return;
 
         if(player.isOnGround() && !player.getAbilities().allowFlying){
             player.getAbilities().allowFlying = true;

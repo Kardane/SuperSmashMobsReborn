@@ -1,4 +1,4 @@
-package org.karn.supersmashmobs.util;
+package org.karn.supersmashmobs.registry;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 import static org.karn.supersmashmobs.SuperSmashMobs.MODID;
 
-public class SSMRegistry {
+public class SSMJobRegistryUtil {
 
     public static void registerSkill(String id, Skill skill) {
         Registry.register(BatoruRegistries.SKILL, MODID +":" +id, skill);

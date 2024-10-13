@@ -16,8 +16,6 @@ public class LivingEntityMixin {
     private final LivingEntity entity = (LivingEntity) (Object) this;
     @Inject(method = "createLivingAttributes", at = @At("RETURN"), require = 1, allow = 1)
     private static void SSM$registerCustomAttributes(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
-        SSMAttributes.ATTRIBUTES.forEach(attribute -> {
-            cir.getReturnValue().add(RegistryEntry.of(attribute));
-        });
+        cir.getReturnValue().add(SSMAttributes.ATTACK_DMG).add(SSMAttributes.ATTACK_SPEED).add(SSMAttributes.HEALTH_REGEN).add(SSMAttributes.KNOCKBACK_TAKEN).add(SSMAttributes.PROTECTION);
     }
 }
